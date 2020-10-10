@@ -34,6 +34,9 @@ class Queue {
    * and return its value. Should throw an error if the queue is empty. */
 
 	dequeue() {
+		if(!this.first){
+			throw new Error("queue is empty");
+		}
 		let oldFirst = this.first;
 		if (this.size === 1) {
 			this.first = null;
